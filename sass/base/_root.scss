@@ -1,0 +1,19 @@
+@use "../abstracts/" as *;
+
+:root{
+
+  //for each font size map we defined, create the css variables corresponding to the screen size. For screen widths larger than small, use our premade mediaquery mixin
+  @each $screen-size, $size-map in $font-sizes {
+    @if $screen-size == small {
+      @each $size-name, $size-value in $size-map {
+        --fs-#{$size-name}: #{$size-value};
+      }
+    } @else {
+      @include mq($screen-size) {
+        @each $size-name, $size-value in $size-map {
+          --fs-#{$size-name}: #{$size-value};
+        }
+      }
+    }
+  }
+}

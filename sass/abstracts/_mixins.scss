@@ -1,0 +1,44 @@
+@use "sass:meta";
+@use "sass:math";
+@use "sass:map";
+@use "breakpoints" as *;
+@use "tokens" as *;
+
+@mixin mq($size) {
+  @if map.has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  } @else if meta.type-of($size) == number {
+    @if math.is-unitless($size) {
+      @error 'when using a number with @mq() make sure to include a unit';
+    } @else {
+      @media screen and (min-width: $size) {
+        @content;
+      }
+    }
+  } @else {
+    @error 'the keyword #{$size} is not in the $breakpoints map';
+  }
+}
+
+//mixin for including current color scheme's variables
+@mixin color-scheme($scheme) {
+  $map: null;
+  @if $scheme == "light" {
+    $map: $light;
+  } @else if $scheme == "dark" {
+    $map: $dark;
+  } @else if $scheme == $active-theme {
+    $map: $active-theme;
+  } @else {
+    @error "unknown scheme";
+  }
+
+  @each $color, $shade-map in $map {
+    @each $shade, $value in $shade-map {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+}

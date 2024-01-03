@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     id="e67a5c99-4a9f-4b77-998f-9a3e893bd356"
+     viewBox="0 0 582 283">
+    <defs>
+        <style>.v-outer{fill:#1fe}.av-main{fill:#141418}.a-outer{fill:#f19}</style>
+    </defs>
+    <g id="f5dd3a05-19ea-4c21-ba65-4eba10b1ccde"
+       data-name="v-shadow">
+        <path d="M286.25 6.5h284.49L428.5 253 286.25 6.5z"
+              class="v-outer" />
+        <path d="m559.49 13-131 227-131-227h262M582 0H275l153.5 266L582 0Z"
+              class="v-outer" />
+    </g>
+    <g id="fb0b5a73-6368-4f1e-88e8-78bc66a978a2"
+       data-name="v">
+        <path d="M256.25 23.5h284.49L398.5 270 256.25 23.5z"
+              class="av-main" />
+        <path d="m529.49 30-131 227-131-227h262M552 17H245l153.5 266L552 17Z"
+              class="v-outer" />
+    </g>
+    <g id="bdc21c25-f726-4067-9081-35b75d7e0554"
+       data-name="a-shadow">
+        <path d="M11.26 276.5 153.5 30l142.25 246.5H11.26z"
+              class="a-outer" />
+        <path d="m153.5 43 131 227h-262l131-227m0-26L0 283h307L153.5 17Z"
+              class="a-outer" />
+    </g>
+    <g id="a91d8c07-c30b-43cd-b15e-a3287ba713d5"
+       data-name="a">
+        <path d="M41.26 259.5 183.5 13.01 325.75 259.5H41.26z"
+              class="av-main" />
+        <path d="m183.5 26 131 227h-262l131-227m0-26L30 266h307L183.5 0Z"
+              class="a-outer" />
+    </g>
+</svg>

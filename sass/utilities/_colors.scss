@@ -1,0 +1,17 @@
+@use"../abstracts" as *;
+
+//creates utility classes based off colors (loop through map, create class)
+@each $color, $shade-map in $active-theme {
+  @each $shade, $value in $shade-map {
+    .#{$prefix} {
+      &clr-#{$color}-#{$shade} {
+        color: var(--#{$color}-#{$shade});
+      }
+    }
+  }
+  .#{$prefix} {
+    &bg-#{$color}-#{$shade} {
+      background-color: var(--#{$color}-#{$shade});
+    }
+  }
+}

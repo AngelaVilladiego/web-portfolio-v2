@@ -1,0 +1,61 @@
+//brights
+$-clr-pink-400: hsl(326, 100%, 53%);
+$-clr-cyan-400: hsl(176, 100%, 53%);
+$-clr-yellow-400: hsl(44, 100%, 56%);
+
+//neutrals
+$-clr-white: hsl(0, 0%, 100%);
+$-clr-beige-100: hsl(39, 47%, 90%);
+$-clr-gray-900: hsl(240, 9%, 9%);
+$-clr-black: hsl(0, 0%, 0%);
+
+//mapping to allow later for programmatically created utility classes as well as switching color schemes
+$dark:(
+  "neutral": (
+    "1000": $-clr-white,
+    "900": $-clr-beige-100,
+    "100": $-clr-gray-900,
+    "000": $-clr-black,
+  ),
+  "pink": (
+    "400": $-clr-pink-400,
+  ),
+  "cyan": (
+    "400": $-clr-cyan-400,
+  ),
+  "yellow": (
+    "400": $-clr-yellow-400,
+  ),
+);
+
+$light:(
+  "neutral": (
+    "000": $-clr-white,
+    "100": $-clr-beige-100,
+    "900": $-clr-gray-900,
+    "1000": $-clr-black,
+  ),
+  "pink": (
+    "400": $-clr-pink-400,
+  ),
+  "cyan": (
+    "400": $-clr-cyan-400,
+  ),
+  "yellow": (
+    "400": $-clr-yellow-400,
+  ),
+);
+
+//contextual color tokens
+$color-neutral-000: var(--neutral-000);
+$color-neutral-100: var(--neutral-100);
+$color-neutral-900: var(--neutral-900);
+$color-neutral-1000: var(--neutral-1000);
+
+$color-pink-400: var(--pink-400);
+
+$color-cyan-400: var(--cyan-400);
+
+$color-yellow-400: var(--yellow-400);
+
+$color-gradient-primary: $-color-cyan-400, $-clr-pink-400,;
