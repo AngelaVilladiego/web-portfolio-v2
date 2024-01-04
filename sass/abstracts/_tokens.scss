@@ -54,11 +54,21 @@ $container-max-width-wide: 68.75rem;
 //#endregion
 
 //#region site header
+$site-header-font-size: $font-size-400;
+
 $site-header-background-color: $color-background-default;
 $site-header-color: $color-text-default;
-$site-header-alignment: center;
+
 $site-header-margin: 0;
-$site-header-padding: $size-8 0;
+$site-header-padding-x: $size-8;
+$site-header-padding-y: $size-8;
+
+$header-logo-width: $size-12;
+
+$nav-list-column-width: 100px;
+$nav-list-item-count: 4;
+$nav-list-gap: 20px;
+
 //#endregion
 
 //#region navigation
