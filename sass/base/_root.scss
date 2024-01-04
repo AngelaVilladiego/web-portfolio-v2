@@ -17,8 +17,11 @@
     }
   }
 
-  $active-theme: #{map.get($default-theme, name)};
-  --active-theme: #{$active-theme};
-  @include color-scheme($active-theme);
+  
+  $active-theme: $default-theme;
+  $active-theme-name: #{map.get($default-theme, name)};
+  
+  --active-theme-name: #{$active-theme-name};
+  @include color-scheme($active-theme-name);
 
 }

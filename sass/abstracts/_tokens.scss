@@ -1,14 +1,20 @@
 @use "colors" as *;
 @use "typography" as *;
 @use "functions" as *;
+@use "sizes" as *;
 
 $default-theme: $dark;
+$enable-media-query-light-mode: false;
 
-// contextual
+//#region contextual
 $color-text-default: $color-neutral-900;
 $color-background-default: $color-neutral-100;
+$color-accent-interactive-hover: $color-yellow-400;
+$color-text-interactive-hover-light: $color-pink-400;
+$color-text-interactive-hover-dark: $color-yellow-400;
+//#endregion
 
-//body
+//#region body
 $body-font-family: $font-family-base;
 $body-font-size: $font-size-300;
 $body-line-height: 1.5;
@@ -16,11 +22,82 @@ $body-font-weight: $font-weight-default;
 $body-text-color: $color-text-default;
 $body-background-color: $color-background-default;
 
-$heading-font-family: $font-family-sub-accent;
-$heading-color-default: $color-text-default;
+$heading-font-family: $font-family-heading;
 $heading-font-weight: $font-weight-default;
-$heading-line-height: 1.1;
+$heading-line-height: 1.2;
+$heading-color-default: $color-neutral-900;
 
-$accent-font-family: $font-family-accent;
-$accent-text-color: $color-text-default;
-$accent-text-gradient: $color-gradient-primary;
+$heading-accent-font-family: $font-family-accent;
+$heading-accent-text-color: $color-text-default;
+$heading-accent-text-gradient: $color-gradient-primary;
+$heading-accent-gradient-direction: 45deg;
+$heading-accent-stroke-width: $size-1;
+$heading-accent-fallback-color: $color-cyan-400;
+
+$heading-sub-font-family: $font-family-heading;
+$heading-sub-font-size: $font-size-500;
+
+$heading-1-accent-font-size: $font-size-900;
+
+$heading-2-accent-font-size-small-screens: $font-size-800;
+$heading-2-accent-font-size-large-screens: $font-size-900;
+//#endregion
+
+//#region layout
+$grid-gap: $size-6;
+$flex-group-gap: $size-4;
+
+$container-min-margin-inline: $size-4;
+$container-max-width: 61rem;
+$container-max-width-narrow: 42rem;
+$container-max-width-wide: 68.75rem;
+//#endregion
+
+//#region site header
+$site-header-background-color: $color-background-default;
+$site-header-color: $color-text-default;
+$site-header-alignment: center;
+$site-header-margin: 0;
+$site-header-padding: $size-8 0;
+//#endregion
+
+//#region navigation
+$navigation-color: $site-header-color;
+$navigation-color-hover-dark: $color-yellow-400; 
+$navigation-color-hover-light: $color-pink-400;
+$navigation-font-size-small-screens: $font-size-700;
+$navigation-font-size-large-screens: $font-size-400;
+$navigation-font-family: $body-font-family;
+$navigation-font-weight: $body-font-weight;
+//#endregion
+
+//#region buttons
+$button-font-family: $font-family-heading;
+$button-padding: 0.7em 1.2em;
+$button-border-width: 0.1em;
+$button-border-style: solid;
+$button-box-shadow-offset-x: $size-2;
+$button-box-shadow-offset-y: $size-1;
+$button-box-shadow-blur: 0px;
+$button-font-weight: $font-weight-bold;
+
+$button-primary-accent-color: $color-pink-400;
+$button-secondary-accent-color: $color-cyan-400;
+$button-hover-accent-color: $color-accent-interactive-hover;
+$button-hover-text-color: $color-gray-900;
+
+$button-filled-box-color: $color-neutral-900;
+$button-filled-primary-background-color: $button-primary-accent-color;
+$button-filled-secondary-background-color: $button-secondary-accent-color;
+$button-filled-font-size: $font-size-500;
+
+$button-outlined-background-color: $color-gray-900;
+$button-outlined-primary-box-color: $button-primary-accent-color;
+$button-outlined-secondary-box-color: $button-secondary-accent-color;
+$button-outlined-plain-box-color: $color-neutral-900;
+$button-outlined-primary-text-color: $button-primary-accent-color;
+$button-outlined-secondary-text-color: $button-secondary-accent-color;
+$button-outlined-plain-text-color: $color-neutral-900;
+$button-outlined-font-size-large-screens: $font-size-500;
+$button-outlined-font-size-small-screens: $font-size-450;
+//#endregion

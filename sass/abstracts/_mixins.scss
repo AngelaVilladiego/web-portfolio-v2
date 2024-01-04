@@ -35,3 +35,23 @@
     }
   }
 }
+
+@mixin heading($fs, $color: $heading-color-default) {
+  font-size: $fs;
+  color: $color;
+
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+}
+
+@mixin button() {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  font-family: $button-font-family;
+  font-weight: $button-font-weight;
+  padding: $button-padding;
+}

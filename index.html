@@ -12,16 +12,51 @@
 <body>
   <header class="primary-header">
      <div class="container">
-      <a href="#"><img src="images/logo.svg" alt="Angela Villadiego's Logo"></a>
+      <div title="Navigate to home">
+        <a href="#">
+          <img src="images/logo.svg" alt="Angela Villadiego's Logo">
+        </a>
+      </div>
       <nav class="primary-navigation">
-        <ul>
-          <li><a href="#">home</a></li>
-          <li><a href="#">projects</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
+        <ul role="list" class="nav-list">
+          <li aria-hidden="true">&lt;</li>
+          <li><a href="#" class="nav-link">home</a></li>
+          <li><a href="#" class="nav-link">projects</a></li>
+          <li><a href="#" class="nav-link">about</a></li>
+          <li><a href="#" class="nav-link">contact</a></li>
+          <li aria-hidden="true">/&gt;</li>
         </ul>
       </nav>
      </div>
   </header>
+
+  <main>
+    <section id="hero-section" aria-label="Hero">
+      <div class="container">
+        <div>
+            <div role="heading" aria-level="1" aria-label="Welcome. I'm Angela, a full-stack web and mobile developer.">
+              <h1 class="heading-sub" aria-hidden="true">Welcome. I'm</h1>
+              <h1 class="heading-1-accent" aria-hidden="true">Angela,</h1>
+              <h1 class="heading-sub" aria-hidden="true">a full-stack web and mobile developer.</h1>
+            </div>
+            <a title="reach out" href="#" class="button-filled" data-type="primary"><span class="button-label">reach out</span></a>
+            <a href="https://github.com/AngelaVilladiego" title="Github" class="icon-link">
+              <img aria-hidden="true" focusable="false" src="images/github.svg" alt="">
+              <span class="sr-only">Github</span>
+            </a>
+            <a href="https://www.linkedin.com/in/angela-villadiego/" title="LinkedIn" class="icon-link">
+              <img aria-hidden="true" focusable="false" src="images/linkedin.svg" alt="">
+              <span class="sr-only">LinkedIn</span>
+            </a>
+        </div>
+        <div>
+          <img id="waving-hand" alt="A friendly waving hand! Hello!" src="images/hand_wave.png">
+        </div>
+      </div>
+      <img alt="Scroll down to see my projects." src="images/dashed_arrow.svg">
+    </section>
+  </main>
+
+
 </body>
 </html>

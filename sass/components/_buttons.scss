@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+.button-outlined {
+  @include button();
+  border: $button-border-width, $button-border-style, $button-primary-accent-color;
+}
+
+.button-filled {
+  @include button();
+  font-size: $button-filled-font-size;
+  border: $button-border-width $button-border-style $button-filled-box-color;
+  box-shadow: $button-box-shadow-offset-x $button-box-shadow-offset-y $button-filled-box-color;
+
+  &[data-type="primary"] {
+    background-color: $button-filled-primary-background-color;
+  }
+}

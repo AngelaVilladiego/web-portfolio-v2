@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Box sizing rules */
 *,
 *::before,
@@ -10,6 +11,13 @@
   margin: 0;
   padding: 0;
   font: inherit;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -34,7 +42,24 @@ body {
   line-height: 1.5;
 }
 
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
 /* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
@@ -45,6 +70,15 @@ picture,
 svg {
   max-width: 100%;
   display: block;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -69,7 +103,7 @@ svg {
   --fs-500: 1.5rem;
   --fs-450: 1.25rem;
   --fs-300: 1rem;
-  --active-theme: dark;
+  --active-theme-name: dark;
   --neutral-1000: hsl(0, 0%, 100%);
   --neutral-900: hsl(39, 47%, 90%);
   --neutral-100: hsl(240, 9%, 9%);
@@ -86,4 +120,270 @@ svg {
     --fs-400: 1.5rem;
     --fs-300: 1.25rem;
   }
+}
+
+body {
+  font-family: "Cantarell", sans-serif;
+  font-weight: 400;
+  font-size: var(--fs-300);
+  color: var(--neutral-900);
+  background-color: var(--neutral-100);
+  line-height: 1.5;
+}
+
+.grid-auto-fit {
+  display: grid;
+  gap: var(--grid-gap, 1.5rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+
+.clr-name-dark {
+  color: var(--name-dark);
+}
+
+.bg-name-dark {
+  background-color: var(--name-dark);
+}
+
+.clr-neutral-1000 {
+  color: var(--neutral-1000);
+}
+
+.bg-neutral-1000 {
+  background-color: var(--neutral-1000);
+}
+
+.clr-neutral-900 {
+  color: var(--neutral-900);
+}
+
+.bg-neutral-900 {
+  background-color: var(--neutral-900);
+}
+
+.clr-neutral-100 {
+  color: var(--neutral-100);
+}
+
+.bg-neutral-100 {
+  background-color: var(--neutral-100);
+}
+
+.clr-neutral-000 {
+  color: var(--neutral-000);
+}
+
+.bg-neutral-000 {
+  background-color: var(--neutral-000);
+}
+
+.clr-pink-400 {
+  color: var(--pink-400);
+}
+
+.bg-pink-400 {
+  background-color: var(--pink-400);
+}
+
+.clr-cyan-400 {
+  color: var(--cyan-400);
+}
+
+.bg-cyan-400 {
+  background-color: var(--cyan-400);
+}
+
+.clr-yellow-400 {
+  color: var(--yellow-400);
+}
+
+.bg-yellow-400 {
+  background-color: var(--yellow-400);
+}
+
+.ff-base {
+  font-family: "Cantarell", sans-serif;
+}
+
+.ff-accent {
+  font-family: "Antic Didone", serif;
+}
+
+.ff-heading {
+  font-family: "Anonymous Pro", monospace;
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+
+.fs-800 {
+  font-size: var(--fs-800);
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
+.fs-450 {
+  font-size: var(--fs-450);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.container {
+  --padding: 1rem * 2;
+  --max-width: 61rem;
+  width: min(100% - var(--padding), var(--max-width));
+  margin-inline: auto;
+}
+
+.container[data-type=narrow] {
+  --max-width: 42rem;
+}
+
+.container[data-type=wide] {
+  --max-width: 68.75rem;
+}
+
+.container[data-type=full-bleed] {
+  --max-width: 100%;
+}
+
+/*
+	Improved screen reader only CSS class
+	@author Gaël Poupard
+		@note Based on Yahoo!'s technique
+		@author Thierry Koblentz
+		@see https://www.cssmojo.com/hide-content-from-sighted-users/
+	* 1.
+		@note `clip` is deprecated but works everywhere
+		@see https://developer.mozilla.org/en-US/docs/Web/CSS/clip
+	* 2.
+		@note `clip-path` is the future-proof version, but not very well supported yet
+		@see https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+		@see http://caniuse.com/#search=clip-path
+		@author Yvain Liechti
+		@see https://twitter.com/ryuran78/status/778943389819604992
+	* 3.
+		@note preventing text to be condensed
+		author J. Renée Beach
+		@see https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+		@note Drupal 8 goes with word-wrap: normal instead
+		@see https://www.drupal.org/node/2045151
+		@see http://cgit.drupalcode.org/drupal/commit/?id=5b847ea
+	* 4.
+		@note !important is important
+		@note Obviously you wanna hide something
+		@author Harry Roberts
+		@see https://csswizardry.com/2016/05/the-importance-of-important/
+*/
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important; /* 2 */
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important; /* 3 */
+}
+
+/*
+	Use in conjunction with .sr-only to only display content when it's focused.
+	@note Useful for skip links 
+	@see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+	@note Based on a HTML5 Boilerplate technique, included in Bootstrap
+	@note Fixed a bug with position: static on iOS 10.0.2 + VoiceOver
+		@author Sylvain Pigeard
+		@see https://github.com/twbs/bootstrap/issues/20732
+*/
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
+}
+
+.heading-sub {
+  font-size: var(--fs-500);
+  color: var(--neutral-900);
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "Anonymous Pro", monospace;
+}
+
+.heading-1-accent {
+  font-size: var(--fs-900);
+  color: var(--cyan-400);
+  font-weight: 400;
+  line-height: 1.2;
+  display: inline-block;
+  font-family: "Antic Didone", serif;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 0.25rem;
+  -webkit-text-fill-color: var(--neutral-900);
+  background-image: linear-gradient(45deg, var(--cyan-400), var(--pink-400));
+  background-clip: text;
+  background-size: 100%;
+  background-color: var(--cyan-400);
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
+}
+
+.button-outlined {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  padding: 0.7em 1.2em;
+  border: 0.1em, solid, var(--pink-400);
+}
+
+.button-filled {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  padding: 0.7em 1.2em;
+  font-size: var(--fs-500);
+  border: 0.1em solid var(--neutral-900);
+  box-shadow: 0.5rem 0.25rem var(--neutral-900);
+}
+.button-filled[data-type=primary] {
+  background-color: var(--pink-400);
 }/*# sourceMappingURL=main.css.map */

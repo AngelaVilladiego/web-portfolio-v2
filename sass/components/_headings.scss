@@ -1,0 +1,39 @@
+@use "sass:meta";
+@use '../abstracts/' as *;
+
+.heading-sub {
+  @include heading(
+    $heading-sub-font-size,
+    $heading-color-default
+  );
+
+  font-family: $heading-sub-font-family;
+}
+
+.heading-1-accent {
+
+  //bg color is fallback if the webkit text properties dont apply
+  @include heading(
+    $heading-1-accent-font-size,
+    $heading-accent-fallback-color
+  );
+
+  display: inline-block;
+
+  font-family: $heading-accent-font-family;
+
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: $heading-accent-stroke-width;
+  -webkit-text-fill-color: $heading-color-default;
+
+  background-image: linear-gradient($heading-accent-gradient-direction, $color-gradient-primary);
+  background-clip: text;
+  background-size: 100%;
+
+  //fallback if gradient background images clipped isnt supported
+  background-color: $heading-accent-fallback-color;
+
+  //necessary to cover for long descenders, such as g, being out of the bounding box
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
+}
