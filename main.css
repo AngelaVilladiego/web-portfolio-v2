@@ -394,31 +394,26 @@ body {
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  width: auto;
+  width: 100%;
 }
 .site-header > div {
+  background-color: var(--neutral-100);
+  box-shadow: 0 0 13px 20px var(--neutral-100);
   display: grid;
   place-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
 }
 .site-header > div .nav-list {
-  background-color: darkgray;
   display: grid;
   grid-template-columns: auto repeat(4, 100px) auto;
   place-items: center;
   gap: 20px;
-  padding: 1rem 2rem 1rem;
-  border-radius: 10px;
 }
 .site-header > div .nav-list li {
   font-size: var(--fs-400);
 }
 
-#header-logo {
-  background-color: darkgray;
-  margin-top: 1rem;
-  padding: 1rem 2rem 0;
-  border-radius: 10px 10px 0 0;
-}
 #header-logo img {
   width: 5rem;
 }/*# sourceMappingURL=main.css.map */

@@ -6,23 +6,23 @@
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  width: auto;
+  width: 100%;
 
   & > div {
+    background-color: $site-header-background-color;
+    box-shadow: 0 0 13px 20px $site-header-background-color ;
     display: grid;
     place-items: center;
     
-    // gap: $site-header-vertical-gap;
-    // padding: $site-header-padding;
+    gap: $site-header-padding-y;
+    padding: $site-header-padding-x $site-header-padding-y;
 
     & .nav-list {
-      background-color: darkgray;
       display: grid;
       grid-template-columns: auto repeat($nav-list-item-count, $nav-list-column-width) auto;
       place-items: center;
       gap: $nav-list-gap;
-      padding: $site-header-padding-y/2 $site-header-padding-x $site-header-padding-y/2;
-      border-radius: 10px;
+
 
       & li{
         font-size: $site-header-font-size;
@@ -34,12 +34,6 @@
 }
 
 #header-logo {
-  background-color: darkgray;
-
-  margin-top: $site-header-padding-y/2;
-  padding: $site-header-padding-y/2 $site-header-padding-x 0;
-  border-radius: 10px 10px 0 0;
-
   & img {
     width: $header-logo-width;
   }
