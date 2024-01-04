@@ -17,15 +17,30 @@
     gap: $site-header-padding-y;
     padding: $site-header-padding-x $site-header-padding-y;
 
-    & .nav-list {
+    & .nav-list-container {
       display: grid;
-      grid-template-columns: auto repeat($nav-list-item-count, $nav-list-column-width) auto;
+      grid-template-columns: repeat(3, auto);
       place-items: center;
       gap: $nav-list-gap;
+
+      & .nav-list {
+        display: grid;
+        grid-template-columns: repeat($nav-list-item-count, $nav-list-column-width);
+        place-items: center;
+        gap: $nav-list-gap;
+        position: relative;
+        & #nav-highlight {
+          position: absolute;
+          width: $nav-list-column-width + $nav-list-gap;
+          height: 90%;
+          left: ($nav-list-gap + $nav-list-column-width) * 0 - $nav-list-gap/2;
+        }
+      }    
 
 
       & li{
         font-size: $site-header-font-size;
+        z-index: 2;
       }
     }
   }

@@ -404,14 +404,28 @@ body {
   gap: 1.5rem;
   padding: 2rem 1.5rem;
 }
-.site-header > div .nav-list {
+.site-header > div .nav-list-container {
   display: grid;
-  grid-template-columns: auto repeat(4, 100px) auto;
+  grid-template-columns: repeat(3, auto);
   place-items: center;
   gap: 20px;
 }
-.site-header > div .nav-list li {
+.site-header > div .nav-list-container .nav-list {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  place-items: center;
+  gap: 20px;
+  position: relative;
+}
+.site-header > div .nav-list-container .nav-list #nav-highlight {
+  position: absolute;
+  width: 120px;
+  height: 90%;
+  left: -10px;
+}
+.site-header > div .nav-list-container li {
   font-size: var(--fs-400);
+  z-index: 2;
 }
 
 #header-logo img {
