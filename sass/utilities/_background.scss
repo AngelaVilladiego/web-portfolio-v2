@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &[data-type="dot-grid"] {
+    $dot-bg: $color-background-default;
+    $dot-color: $color-text-default;
+    $dot-size: $dot-grid-dot-size;
+    $dot-space: $dot-grid-dot-space;
+
+    opacity: $dot-grid-opacity;
+
+    background:
+      linear-gradient(90deg, $dot-bg calc($dot-space - $dot-size), transparent 1%) center / $dot-space $dot-space,
+      linear-gradient($dot-bg calc($dot-space - $dot-size), transparent 1%) center / $dot-space $dot-space,
+      $dot-color;
+  }
+
+  &[data-type="gradient-primary"] {
+    background: linear-gradient(to left top, $color-gradient-primary);
+  }
+}
+
+.blend {
+  &[data-blend-mode="darken"] {
+    mix-blend-mode: darken;
+  }
+}

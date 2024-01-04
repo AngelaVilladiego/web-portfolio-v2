@@ -349,6 +349,25 @@ body {
   transform: translate(-50%);
 }
 
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.background[data-type=dot-grid] {
+  opacity: 0.6;
+  background: linear-gradient(90deg, var(--neutral-100) 198px, transparent 1%) center/200px 200px, linear-gradient(var(--neutral-100) 198px, transparent 1%) center/200px 200px, var(--neutral-900);
+}
+.background[data-type=gradient-primary] {
+  background: linear-gradient(to left top, var(--cyan-400), var(--pink-400));
+}
+
+.blend[data-blend-mode=darken] {
+  mix-blend-mode: darken;
+}
+
 .heading-sub {
   font-size: var(--fs-500);
   color: var(--neutral-900);
