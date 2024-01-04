@@ -1,4 +1,5 @@
 @use "../abstracts/" as *;
+@use "sass:math";
 
 .site-header {
   color: $site-header-color;
@@ -7,13 +8,15 @@
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
+  z-index: 1;
 
-  & > div {
+  & > .container {
+    margin-inline: auto;
     background-color: $site-header-background-color;
-    box-shadow: 0 0 13px 20px $site-header-background-color ;
+    box-shadow: 0 0 13px 20px $site-header-background-color;
     display: grid;
     place-items: center;
-    
+
     gap: $site-header-padding-y;
     padding: $site-header-padding-x $site-header-padding-y;
 
@@ -33,19 +36,16 @@
           position: absolute;
           width: $nav-list-column-width + $nav-list-gap;
           height: 90%;
-          left: ($nav-list-gap + $nav-list-column-width) * 0 - $nav-list-gap/2;
+          left: ($nav-list-gap + $nav-list-column-width) * 0 - calc($nav-list-gap / 2);
         }
-      }    
+      }
 
-
-      & li{
+      & li {
         font-size: $site-header-font-size;
         z-index: 2;
       }
     }
   }
-
-  
 }
 
 #header-logo {

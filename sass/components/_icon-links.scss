@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.icon-link {
+  display: inline-block;
+  width: $icon-link-width;
+}
+
+.icon-link-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  gap: $icon-link-group-gap;
+}

@@ -1,0 +1,18 @@
+.center-container {
+  position: relative;
+
+  & > .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &[data-type="vertically"] {
+      left: auto;
+      transform: translate(0, -50%);
+    }
+    &[data-type="horizontally"] {
+      top: auto;
+      transform: translate(-50%);
+    }
+  }
+}

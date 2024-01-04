@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+
+#scroll-cta {
+  position: absolute;
+  bottom: $site-header-padding-y;
+  width: 24px;
+  height: 156px; 
+  left: 50%;
+  transform: translate(-50%);
+}

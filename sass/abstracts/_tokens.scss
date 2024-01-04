@@ -24,7 +24,7 @@ $body-background-color: $color-background-default;
 
 $heading-font-family: $font-family-heading;
 $heading-font-weight: $font-weight-default;
-$heading-line-height: 1.2;
+$heading-line-height: 1.1;
 $heading-color-default: $color-neutral-900;
 
 $heading-accent-font-family: $font-family-accent;
@@ -38,6 +38,7 @@ $heading-sub-font-family: $font-family-heading;
 $heading-sub-font-size: $font-size-500;
 
 $heading-1-accent-font-size: $font-size-900;
+$heading-1-accent-padding-bottom: 0.1em;
 
 $heading-2-accent-font-size-small-screens: $font-size-800;
 $heading-2-accent-font-size-large-screens: $font-size-900;
@@ -47,8 +48,8 @@ $heading-2-accent-font-size-large-screens: $font-size-900;
 $grid-gap: $size-6;
 $flex-group-gap: $size-4;
 
-$container-min-margin-inline: $size-4;
-$container-max-width: 61rem;
+$container-min-margin-inline: $size-1;
+$container-max-width: 56.75rem;
 $container-max-width-narrow: 42rem;
 $container-max-width-wide: 68.75rem;
 //#endregion
@@ -59,7 +60,7 @@ $site-header-font-size: $font-size-400;
 $site-header-background-color: $color-background-default;
 $site-header-color: $color-text-default;
 
-$site-header-margin: 0;
+$site-header-margin: $size-4;
 $site-header-padding-x: $size-8;
 $site-header-padding-y: $size-6;
 
@@ -73,7 +74,7 @@ $nav-list-gap: 20px;
 
 //#region navigation
 $navigation-color: $site-header-color;
-$navigation-color-hover-dark: $color-yellow-400; 
+$navigation-color-hover-dark: $color-yellow-400;
 $navigation-color-hover-light: $color-pink-400;
 $navigation-font-size-small-screens: $font-size-700;
 $navigation-font-size-large-screens: $font-size-400;
@@ -110,4 +111,13 @@ $button-outlined-secondary-text-color: $button-secondary-accent-color;
 $button-outlined-plain-text-color: $color-neutral-900;
 $button-outlined-font-size-large-screens: $font-size-500;
 $button-outlined-font-size-small-screens: $font-size-450;
+//#endregion
+
+//#region icon links
+$icon-link-width: $size-9;
+$icon-link-group-gap: $size-5;
+//#endregion
+
+//#region hero
+$hero-main-gap: $size-9;
 //#endregion

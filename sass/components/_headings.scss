@@ -1,22 +1,16 @@
 @use "sass:meta";
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 .heading-sub {
-  @include heading(
-    $heading-sub-font-size,
-    $heading-color-default
-  );
+  @include heading($heading-sub-font-size, $heading-color-default);
+  text-wrap: auto;
 
   font-family: $heading-sub-font-family;
 }
 
 .heading-1-accent {
-
   //bg color is fallback if the webkit text properties dont apply
-  @include heading(
-    $heading-1-accent-font-size,
-    $heading-accent-fallback-color
-  );
+  @include heading($heading-1-accent-font-size, $heading-accent-fallback-color);
 
   display: inline-block;
 
@@ -34,6 +28,6 @@
   background-color: $heading-accent-fallback-color;
 
   //necessary to cover for long descenders, such as g, being out of the bounding box
-  padding-bottom: 0.2em;
+  padding-bottom: 0.2em + $heading-1-accent-padding-bottom;
   margin-bottom: -0.2em;
 }

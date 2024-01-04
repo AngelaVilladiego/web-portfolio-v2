@@ -1,0 +1,28 @@
+@use "../abstracts/" as *;
+
+#hero-section {
+  height: 100vh;
+
+  & .container {
+    height: 100%;
+    & > .center {
+      top: 55%;
+      display: grid;
+      grid-template-columns: 12fr 7fr;
+      align-items: center;
+
+      & #hero-main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $hero-main-gap;
+      }
+
+      & #hero-image {
+        & > img {
+          transform: rotate(6deg);
+        }
+      }
+    }
+  }
+}
