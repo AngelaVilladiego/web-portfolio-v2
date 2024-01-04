@@ -3,6 +3,7 @@
 @use "sass:map";
 @use "breakpoints" as *;
 @use "tokens" as *;
+@use "functions" as *;
 
 @mixin mq($size) {
   @if map.has-key($breakpoints, $size) {
@@ -24,21 +25,13 @@
 }
 
 //mixin for including current color scheme's variables
-@mixin color-scheme($scheme) {
-  $map: null;
-  @if $scheme == "light" {
-    $map: $light;
-  } @else if $scheme == "dark" {
-    $map: $dark;
-  } @else if $scheme == $active-theme {
-    $map: $active-theme;
-  } @else {
-    @error "unknown scheme";
-  }
-
+@mixin color-scheme($scheme-name) {
+  $map: get-scheme($scheme-name);
   @each $color, $shade-map in $map {
-    @each $shade, $value in $shade-map {
-      --#{$color}-#{$shade}: #{$value};
+    @if ($color != name){
+      @each $shade, $value in $shade-map {
+        --#{$color}-#{$shade}: #{$value};
+      }
     }
   }
 }

@@ -69,6 +69,14 @@ svg {
   --fs-500: 1.5rem;
   --fs-450: 1.25rem;
   --fs-300: 1rem;
+  --active-theme: dark;
+  --neutral-1000: hsl(0, 0%, 100%);
+  --neutral-900: hsl(39, 47%, 90%);
+  --neutral-100: hsl(240, 9%, 9%);
+  --neutral-000: hsl(0, 0%, 0%);
+  --pink-400: hsl(326, 100%, 53%);
+  --cyan-400: hsl(176, 100%, 53%);
+  --yellow-400: hsl(44, 100%, 56%);
 }
 @media screen and (min-width: 45em) {
   :root {

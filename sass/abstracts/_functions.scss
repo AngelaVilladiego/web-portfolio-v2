@@ -1,0 +1,14 @@
+@use "sass:meta";
+@use "sass:map";
+@use "colors" as *;
+
+@function get-scheme($scheme) {
+  $map: null;
+  @if $scheme == "light" {
+    @return $light;
+  } @else if $scheme == "dark" {
+    @return $dark;
+  } @else {
+    @error "unknown scheme";
+  }
+}

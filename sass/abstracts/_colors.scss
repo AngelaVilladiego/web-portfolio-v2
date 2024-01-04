@@ -11,6 +11,7 @@ $-clr-black: hsl(0, 0%, 0%);
 
 //mapping to allow later for programmatically created utility classes as well as switching color schemes
 $dark:(
+  name: "dark",
   "neutral": (
     "1000": $-clr-white,
     "900": $-clr-beige-100,
@@ -29,6 +30,7 @@ $dark:(
 );
 
 $light:(
+  name: "light",
   "neutral": (
     "000": $-clr-white,
     "100": $-clr-beige-100,
@@ -58,4 +60,6 @@ $color-cyan-400: var(--cyan-400);
 
 $color-yellow-400: var(--yellow-400);
 
-$color-gradient-primary: $-color-cyan-400, $-clr-pink-400,;
+$color-gradient-primary: $color-cyan-400, $color-pink-400,;
+
+$active-theme: var(--active-theme);
