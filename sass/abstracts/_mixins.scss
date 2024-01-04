@@ -28,7 +28,7 @@
 @mixin color-scheme($scheme-name) {
   $map: get-scheme($scheme-name);
   @each $color, $shade-map in $map {
-    @if ($color != name){
+    @if ($color != name) {
       @each $shade, $value in $shade-map {
         --#{$color}-#{$shade}: #{$value};
       }
@@ -54,4 +54,22 @@
   font-family: $button-font-family;
   font-weight: $button-font-weight;
   padding: $button-padding;
+}
+
+@mixin random_sprinkle {
+  @for $i from 1 through 8 {
+    svg:nth-child(#{$i}) {
+      $rotation: math.random() * 360;
+      $opacity: (2 + math.random(8)) / 10;
+      $offset-x: math.percentage(math.random(100)) / 100;
+      $offset-y: math.percentage(math.random(100)) / 100;
+
+      @debug "rotation: #{$rotation}, opacity: #{$opacity}, offset-x: #{$offset-x}, offset-y: #{$offset-y}";
+
+      top: #{$offset-y};
+      left: #{$offset-x};
+      transform: rotate(#{$rotation}deg) translate(-50%, -50%);
+      opacity: #{$opacity};
+    }
+  }
 }

@@ -24,6 +24,17 @@
   &[data-type="gradient-primary"] {
     background: linear-gradient(to left top, $color-gradient-primary);
   }
+
+  &[data-type="sprinkles"] {
+    overflow: hidden;
+
+    & > svg {
+      position: absolute;
+      width: 79px;
+    }
+
+    @include random_sprinkle();
+  }
 }
 
 .blend {

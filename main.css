@@ -363,6 +363,61 @@ body {
 .background[data-type=gradient-primary] {
   background: linear-gradient(to left top, var(--cyan-400), var(--pink-400));
 }
+.background[data-type=sprinkles] {
+  overflow: hidden;
+}
+.background[data-type=sprinkles] > svg {
+  position: absolute;
+  width: 79px;
+}
+.background[data-type=sprinkles] svg:nth-child(1) {
+  top: 7%;
+  left: 85%;
+  transform: rotate(227.8782124816deg) translate(-50%, -50%);
+  opacity: 0.5;
+}
+.background[data-type=sprinkles] svg:nth-child(2) {
+  top: 93%;
+  left: 81%;
+  transform: rotate(210.2818577248deg) translate(-50%, -50%);
+  opacity: 0.5;
+}
+.background[data-type=sprinkles] svg:nth-child(3) {
+  top: 95%;
+  left: 50%;
+  transform: rotate(257.3728736288deg) translate(-50%, -50%);
+  opacity: 0.3;
+}
+.background[data-type=sprinkles] svg:nth-child(4) {
+  top: 70%;
+  left: 34%;
+  transform: rotate(108.6149423829deg) translate(-50%, -50%);
+  opacity: 0.5;
+}
+.background[data-type=sprinkles] svg:nth-child(5) {
+  top: 14%;
+  left: 13%;
+  transform: rotate(324.6523460863deg) translate(-50%, -50%);
+  opacity: 1;
+}
+.background[data-type=sprinkles] svg:nth-child(6) {
+  top: 95%;
+  left: 32%;
+  transform: rotate(183.9725235887deg) translate(-50%, -50%);
+  opacity: 0.4;
+}
+.background[data-type=sprinkles] svg:nth-child(7) {
+  top: 85%;
+  left: 20%;
+  transform: rotate(178.2895166124deg) translate(-50%, -50%);
+  opacity: 0.3;
+}
+.background[data-type=sprinkles] svg:nth-child(8) {
+  top: 65%;
+  left: 4%;
+  transform: rotate(224.9959758228deg) translate(-50%, -50%);
+  opacity: 0.7;
+}
 
 .blend[data-blend-mode=darken] {
   mix-blend-mode: darken;
