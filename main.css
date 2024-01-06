@@ -371,52 +371,52 @@ body {
   width: 79px;
 }
 .background[data-type=sprinkles] svg:nth-child(1) {
-  top: 7%;
-  left: 85%;
-  transform: rotate(227.8782124816deg) translate(-50%, -50%);
+  top: 80%;
+  left: 39%;
+  transform: rotate(155.9773728746deg) translate(-50%, -50%);
   opacity: 0.5;
 }
 .background[data-type=sprinkles] svg:nth-child(2) {
-  top: 93%;
-  left: 81%;
-  transform: rotate(210.2818577248deg) translate(-50%, -50%);
-  opacity: 0.5;
-}
-.background[data-type=sprinkles] svg:nth-child(3) {
-  top: 95%;
-  left: 50%;
-  transform: rotate(257.3728736288deg) translate(-50%, -50%);
+  top: 72%;
+  left: 79%;
+  transform: rotate(284.0514094364deg) translate(-50%, -50%);
   opacity: 0.3;
 }
-.background[data-type=sprinkles] svg:nth-child(4) {
-  top: 70%;
-  left: 34%;
-  transform: rotate(108.6149423829deg) translate(-50%, -50%);
-  opacity: 0.5;
-}
-.background[data-type=sprinkles] svg:nth-child(5) {
-  top: 14%;
-  left: 13%;
-  transform: rotate(324.6523460863deg) translate(-50%, -50%);
+.background[data-type=sprinkles] svg:nth-child(3) {
+  top: 19%;
+  left: 51%;
+  transform: rotate(291.8474426417deg) translate(-50%, -50%);
   opacity: 1;
 }
+.background[data-type=sprinkles] svg:nth-child(4) {
+  top: 52%;
+  left: 24%;
+  transform: rotate(347.1657258059deg) translate(-50%, -50%);
+  opacity: 0.7;
+}
+.background[data-type=sprinkles] svg:nth-child(5) {
+  top: 22%;
+  left: 16%;
+  transform: rotate(155.9026582067deg) translate(-50%, -50%);
+  opacity: 0.5;
+}
 .background[data-type=sprinkles] svg:nth-child(6) {
-  top: 95%;
-  left: 32%;
-  transform: rotate(183.9725235887deg) translate(-50%, -50%);
+  top: 80%;
+  left: 67%;
+  transform: rotate(152.2440943758deg) translate(-50%, -50%);
   opacity: 0.4;
 }
 .background[data-type=sprinkles] svg:nth-child(7) {
-  top: 85%;
-  left: 20%;
-  transform: rotate(178.2895166124deg) translate(-50%, -50%);
+  top: 49%;
+  left: 38%;
+  transform: rotate(222.8847446303deg) translate(-50%, -50%);
   opacity: 0.3;
 }
 .background[data-type=sprinkles] svg:nth-child(8) {
-  top: 65%;
-  left: 4%;
-  transform: rotate(224.9959758228deg) translate(-50%, -50%);
-  opacity: 0.7;
+  top: 3%;
+  left: 81%;
+  transform: rotate(190.7696915794deg) translate(-50%, -50%);
+  opacity: 0.5;
 }
 
 .blend[data-blend-mode=darken] {
