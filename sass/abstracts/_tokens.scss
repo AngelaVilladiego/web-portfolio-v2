@@ -35,9 +35,17 @@ $heading-accent-stroke-width: $size-1;
 $heading-accent-fallback-color: $color-cyan-400;
 
 $heading-sub-font-family: $font-family-heading;
-$heading-sub-font-size: $font-size-500;
+// $heading-sub-font-size: $font-size-500;
 
-$heading-1-accent-font-size: $font-size-900;
+// $heading-1-accent-font-size: $font-size-900;
+// $heading-1-accent-padding-bottom: 0.1em;
+
+// $heading-2-accent-font-size-small-screens: $font-size-800;
+// $heading-2-accent-font-size-large-screens: $font-size-900;
+
+$heading-sub-font-size: clamp(1rem, 4.5vw + 0.5rem, #{$font-size-500});
+
+$heading-1-accent-font-size: clamp(3rem, 20vw + 0.6rem, #{$font-size-900});
 $heading-1-accent-padding-bottom: 0.1em;
 
 $heading-2-accent-font-size-small-screens: $font-size-800;
@@ -48,7 +56,7 @@ $heading-2-accent-font-size-large-screens: $font-size-900;
 $grid-gap: $size-6;
 $flex-group-gap: $size-4;
 
-$container-min-margin-inline: $size-1;
+$container-min-margin-inline: $size-6;
 $container-max-width: 56.75rem;
 $container-max-width-narrow: 42rem;
 $container-max-width-wide: 68.75rem;
@@ -119,7 +127,7 @@ $icon-link-group-gap: $size-5;
 //#endregion
 
 //#region hero
-$hero-main-gap: $size-9;
+$hero-main-gap: $size-8;
 //#endregion
 
 //#region backgroiunds

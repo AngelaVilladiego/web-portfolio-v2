@@ -60,11 +60,9 @@
   @for $i from 1 through 8 {
     svg:nth-child(#{$i}) {
       $rotation: math.random() * 360;
-      $opacity: (2 + math.random(8)) / 10;
-      $offset-x: math.percentage(math.random(100)) / 100;
-      $offset-y: math.percentage(math.random(100)) / 100;
-
-      @debug "rotation: #{$rotation}, opacity: #{$opacity}, offset-x: #{$offset-x}, offset-y: #{$offset-y}";
+      $opacity: math.div((2 + math.random(8)), 10);
+      $offset-x: math.div(math.percentage(math.random(100)), 100);
+      $offset-y: math.div(math.percentage(math.random(100)), 100);
 
       top: #{$offset-y};
       left: #{$offset-x};

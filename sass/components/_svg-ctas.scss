@@ -4,7 +4,11 @@
   position: absolute;
   bottom: $site-header-padding-y;
   width: 24px;
-  height: 156px; 
+  height: 10%;
   left: 50%;
   transform: translate(-50%);
+
+  @include mq(medium) {
+    height: 156px;
+  }
 }

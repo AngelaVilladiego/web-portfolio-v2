@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "../abstracts/" as *;
 
-:root{
+:root {
   //for each font size map we defined, create the css variables corresponding to the screen size. For screen widths larger than small, use our premade mediaquery mixin
   @each $screen-size, $size-map in $font-sizes {
     @if $screen-size == small {
@@ -17,11 +17,9 @@
     }
   }
 
-  
   $active-theme: $default-theme;
   $active-theme-name: #{map.get($default-theme, name)};
-  
+
   --active-theme-name: #{$active-theme-name};
   @include color-scheme($active-theme-name);
-
 }
