@@ -1,0 +1,11 @@
+@use "../abstracts/" as *;
+
+#about-section {
+  @include mq(medium) {
+    --active-theme-name: light;
+    @include color-scheme(light);
+
+    background-color: $color-background-default;
+    color: $color-text-default;
+  }
+}

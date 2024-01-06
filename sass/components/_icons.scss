@@ -1,0 +1,33 @@
+@use "../abstracts/" as *;
+
+.icon-link {
+  display: inline-block;
+  width: $icon-link-width;
+}
+
+.icon-link-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  gap: $icon-link-group-gap;
+}
+
+//icon system retrieved from https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
+.icon {
+  display: inline-flex;
+  align-self: center;
+}
+
+.icon svg,
+.icon img {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+
+.icon.baseline svg,
+.icon img {
+  top: 0.125em;
+  position: relative;
+}

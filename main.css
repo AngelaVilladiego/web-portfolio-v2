@@ -137,6 +137,18 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
 }
 
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.even-columns {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
 .clr-name-dark {
   color: var(--name-dark);
 }
@@ -371,56 +383,78 @@ body {
   width: 79px;
 }
 .background[data-type=sprinkles] svg:nth-child(1) {
-  top: 79%;
-  left: 12%;
-  transform: rotate(304.8411347157deg) translate(-50%, -50%);
+  top: 31%;
+  left: 2%;
+  transform: rotate(347.7948353666deg) translate(-50%, -50%);
   opacity: 1;
 }
 .background[data-type=sprinkles] svg:nth-child(2) {
-  top: 33%;
-  left: 21%;
-  transform: rotate(194.2072857766deg) translate(-50%, -50%);
-  opacity: 0.9;
+  top: 9%;
+  left: 3%;
+  transform: rotate(50.157674458deg) translate(-50%, -50%);
+  opacity: 0.8;
 }
 .background[data-type=sprinkles] svg:nth-child(3) {
-  top: 81%;
-  left: 33%;
-  transform: rotate(247.5824110497deg) translate(-50%, -50%);
-  opacity: 0.5;
+  top: 12%;
+  left: 22%;
+  transform: rotate(189.8567988664deg) translate(-50%, -50%);
+  opacity: 0.4;
 }
 .background[data-type=sprinkles] svg:nth-child(4) {
-  top: 47%;
-  left: 37%;
-  transform: rotate(200.0745074908deg) translate(-50%, -50%);
-  opacity: 0.4;
-}
-.background[data-type=sprinkles] svg:nth-child(5) {
-  top: 23%;
-  left: 69%;
-  transform: rotate(175.8525586942deg) translate(-50%, -50%);
-  opacity: 0.4;
-}
-.background[data-type=sprinkles] svg:nth-child(6) {
-  top: 14%;
-  left: 36%;
-  transform: rotate(17.6071697863deg) translate(-50%, -50%);
+  top: 27%;
+  left: 66%;
+  transform: rotate(113.0027875386deg) translate(-50%, -50%);
   opacity: 0.3;
 }
+.background[data-type=sprinkles] svg:nth-child(5) {
+  top: 86%;
+  left: 98%;
+  transform: rotate(206.4528188427deg) translate(-50%, -50%);
+  opacity: 0.3;
+}
+.background[data-type=sprinkles] svg:nth-child(6) {
+  top: 11%;
+  left: 23%;
+  transform: rotate(103.7279840289deg) translate(-50%, -50%);
+  opacity: 1;
+}
 .background[data-type=sprinkles] svg:nth-child(7) {
-  top: 91%;
-  left: 4%;
-  transform: rotate(49.5722509479deg) translate(-50%, -50%);
-  opacity: 0.5;
+  top: 93%;
+  left: 50%;
+  transform: rotate(120.0791550489deg) translate(-50%, -50%);
+  opacity: 0.3;
 }
 .background[data-type=sprinkles] svg:nth-child(8) {
-  top: 2%;
-  left: 40%;
-  transform: rotate(353.4599807506deg) translate(-50%, -50%);
+  top: 88%;
+  left: 3%;
+  transform: rotate(281.1910467072deg) translate(-50%, -50%);
   opacity: 1;
 }
 
 .blend[data-blend-mode=darken] {
   mix-blend-mode: darken;
+}
+
+.transition-halftone {
+  display: none;
+}
+@media screen and (min-width: 45em) {
+  .transition-halftone {
+    display: block;
+    background: url(images/halftone_transition_tile.png) repeat-x;
+    width: 100%;
+    height: 204px;
+  }
+  .transition-halftone[data-type=light] {
+    background-image: url(images/halftone_transition_tile.png);
+  }
+  .transition-halftone[data-type=dark] {
+    background-image: url(images/halftone_transition_tile_dark.png);
+  }
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
 }
 
 .heading-sub {
@@ -600,7 +634,7 @@ header {
 
 .icon-link {
   display: inline-block;
-  width: 2.5rem;
+  width: 1.5rem;
 }
 
 .icon-link-group {
@@ -609,4 +643,37 @@ header {
   align-items: center;
   align-content: center;
   gap: 1.25rem;
+}
+
+.icon {
+  display: inline-flex;
+  align-self: center;
+}
+
+.icon svg,
+.icon img {
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+
+.icon.baseline svg,
+.icon img {
+  top: 0.125em;
+  position: relative;
+}
+
+@media screen and (min-width: 45em) {
+  #about-section {
+    --active-theme-name: light;
+    --neutral-000: hsl(0, 0%, 100%);
+    --neutral-100: hsl(39, 47%, 90%);
+    --neutral-900: hsl(240, 9%, 9%);
+    --neutral-1000: hsl(0, 0%, 0%);
+    --pink-400: hsl(326, 100%, 53%);
+    --cyan-400: hsl(176, 100%, 53%);
+    --yellow-400: hsl(44, 100%, 56%);
+    background-color: var(--neutral-100);
+    color: var(--neutral-900);
+  }
 }/*# sourceMappingURL=main.css.map */

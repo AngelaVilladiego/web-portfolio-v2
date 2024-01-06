@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+.transition-halftone {
+  display: none;
+
+  @include mq(medium) {
+    display: block;
+    background: url(images/halftone_transition_tile.png) repeat-x;
+    width: 100%;
+    height: 204px;
+
+    &[data-type="light"] {
+      background-image: url(images/halftone_transition_tile.png);
+    }
+
+    &[data-type="dark"] {
+      background-image: url(images/halftone_transition_tile_dark.png);
+    }
+  }
+}
