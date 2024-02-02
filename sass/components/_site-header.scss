@@ -1,6 +1,10 @@
 @use "../abstracts/" as *;
 @use "sass:math";
 
+header {
+  display: none !important;
+}
+
 .site-header {
   color: $site-header-color;
   position: fixed;
@@ -28,7 +32,10 @@
 
       & .nav-list {
         display: grid;
-        grid-template-columns: repeat($nav-list-item-count, $nav-list-column-width);
+        grid-template-columns: repeat(
+          $nav-list-item-count,
+          $nav-list-column-width
+        );
         place-items: center;
         gap: $nav-list-gap;
         position: relative;
@@ -36,7 +43,8 @@
           position: absolute;
           width: $nav-list-column-width + $nav-list-gap;
           height: 90%;
-          left: ($nav-list-gap + $nav-list-column-width) * 0 - calc($nav-list-gap / 2);
+          left: ($nav-list-gap + $nav-list-column-width) * 0 -
+            calc($nav-list-gap / 2);
         }
       }
 

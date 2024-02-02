@@ -2,7 +2,13 @@
 
 .icon-link {
   display: inline-block;
-  width: $icon-link-width;
+
+  padding: $icon-link-padding;
+  margin: -$icon-link-padding;
+
+  & > img {
+    width: $icon-link-width;
+  }
 }
 
 .icon-link-group {
@@ -11,6 +17,7 @@
   align-items: center;
   align-content: center;
   gap: $icon-link-group-gap;
+  margin-top: $hero-main-gap;
 }
 
 //icon system retrieved from https://blog.prototypr.io/align-svg-icons-to-text-and-say-goodbye-to-font-icons-d44b3d7b26b4
