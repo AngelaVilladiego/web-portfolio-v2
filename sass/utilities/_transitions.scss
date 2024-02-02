@@ -6,8 +6,9 @@
   @include mq(medium) {
     display: block;
     background: url(images/halftone_transition_tile.png) repeat-x;
+    background-size: contain;
     width: 100%;
-    height: 204px;
+    height: 102px;
 
     &[data-type="light"] {
       background-image: url(images/halftone_transition_tile.png);

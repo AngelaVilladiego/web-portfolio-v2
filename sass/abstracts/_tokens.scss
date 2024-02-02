@@ -60,6 +60,8 @@ $container-min-margin-inline: $size-6;
 $container-max-width: 56.75rem;
 $container-max-width-narrow: 42rem;
 $container-max-width-wide: 68.75rem;
+
+$section-margin: $size-8;
 //#endregion
 
 //#region site header
@@ -92,11 +94,10 @@ $navigation-font-weight: $body-font-weight;
 
 //#region buttons
 $button-font-family: $font-family-heading;
-$button-padding: 0.7em 1.2em;
-$button-border-width: 0.1em;
+$button-border-width: 3px;
 $button-border-style: solid;
-$button-box-shadow-offset-x: $size-2;
-$button-box-shadow-offset-y: $size-1;
+$button-box-shadow-offset-x: 8px;
+$button-box-shadow-offset-y: 8px;
 $button-box-shadow-blur: 0px;
 $button-font-weight: $font-weight-bold;
 
@@ -105,11 +106,13 @@ $button-secondary-accent-color: $color-cyan-400;
 $button-hover-accent-color: $color-accent-interactive-hover;
 $button-hover-text-color: $color-gray-900;
 
+$button-filled-padding: 0.7em 1.2em;
 $button-filled-box-color: $color-neutral-900;
 $button-filled-primary-background-color: $button-primary-accent-color;
 $button-filled-secondary-background-color: $button-secondary-accent-color;
 $button-filled-font-size: $font-size-500;
 
+$button-outlined-padding: 0.6em 1.2em;
 $button-outlined-background-color: $color-gray-900;
 $button-outlined-primary-box-color: $button-primary-accent-color;
 $button-outlined-secondary-box-color: $button-secondary-accent-color;
@@ -118,7 +121,9 @@ $button-outlined-primary-text-color: $button-primary-accent-color;
 $button-outlined-secondary-text-color: $button-secondary-accent-color;
 $button-outlined-plain-text-color: $color-neutral-900;
 $button-outlined-font-size-large-screens: $font-size-500;
-$button-outlined-font-size-small-screens: $font-size-450;
+$button-outlined-font-size-small-screens: clamp(1rem, 5vw, #{$font-size-450});
+
+$button-content-gap: $size-2;
 //#endregion
 
 //#region icon links
@@ -131,8 +136,25 @@ $icon-link-padding: $size-4;
 $hero-main-gap: $size-8;
 //#endregion
 
-//#region backgroiunds
+//#region backgrounds
 $dot-grid-dot-size: 2px;
 $dot-grid-dot-space: 200px;
 $dot-grid-opacity: 0.6;
+//#endregion
+
+//#region about
+$about-buttons-padding-block: $size-9;
+$about-section-padding-small: 2em;
+//#endregion
+
+//#region form
+$form-padding-block: $size-8;
+$form-field-gap: $size-1;
+$form-label-font-size-small-screens: $font-size-450;
+$form-label-font-size-medium-screens: $font-size-500;
+$form-label-font-family: $font-family-heading;
+$form-label-font-weight: $font-weight-bold;
+$form-field-color: $color-neutral-900;
+$input-padding: $size-1;
+
 //#endregion

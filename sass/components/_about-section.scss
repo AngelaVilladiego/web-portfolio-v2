@@ -8,4 +8,15 @@
     background-color: $color-background-default;
     color: $color-text-default;
   }
+
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    padding-block: $about-buttons-padding-block;
+    align-items: center;
+  }
+
+  > .container {
+    padding-block: $section-margin;
+  }
 }

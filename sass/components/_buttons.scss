@@ -2,16 +2,47 @@
 
 .button-outlined {
   @include button();
-  border: $button-border-width, $button-border-style, $button-primary-accent-color;
+  font-size: $button-outlined-font-size-small-screens;
+  background-color: $button-outlined-background-color;
+  border: $button-border-width $button-border-style
+    $button-outlined-plain-box-color;
+  box-shadow: $button-box-shadow-offset-x $button-box-shadow-offset-y
+    $button-outlined-plain-box-color;
+  color: $button-outlined-plain-text-color;
+  padding: $button-outlined-padding;
+
+  &[data-type="primary"] {
+    border: $button-border-width $button-border-style
+      $button-primary-accent-color;
+    box-shadow: $button-box-shadow-offset-x $button-box-shadow-offset-y
+      $button-primary-accent-color;
+    color: $button-primary-accent-color;
+  }
+
+  &[data-type="secondary"] {
+    border-color: $button-secondary-accent-color;
+    box-shadow: $button-box-shadow-offset-x $button-box-shadow-offset-y
+      $button-secondary-accent-color;
+    color: $button-secondary-accent-color;
+  }
 }
 
 .button-filled {
   @include button();
   font-size: $button-filled-font-size;
   border: $button-border-width $button-border-style $button-filled-box-color;
-  box-shadow: $button-box-shadow-offset-x $button-box-shadow-offset-y $button-filled-box-color;
+  box-shadow: $button-box-shadow-offset-x $button-box-shadow-offset-y
+    $button-filled-box-color;
+  padding: $button-filled-padding;
 
   &[data-type="primary"] {
     background-color: $button-filled-primary-background-color;
   }
+}
+
+.button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $button-content-gap;
 }

@@ -1,52 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angela's portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Antic+Didone&family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head profile="http://www.w3.org/2005/10/profile">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angela's portfolio</title>
-  <link rel="icon" type="image/png" href="images/favicon.png" />
-  <link rel="stylesheet" href="main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-        href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Antic+Didone&family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
-  <header class="site-header">
-    <div class="container" data-type="wide">
-      <div title="Navigate to home" id="header-logo">
-        <a href="#">
-          <img src="images/logo.svg" alt="Angela Villadiego's Logo">
-        </a>
-      </div>
-      <nav class="primary-navigation">
-        <div class="nav-list-container">
-          <span aria-hidden="true">&lt;</span>
-          <ul role="list" title="Navigation list" class="nav-list">
-            <svg id="nav-highlight" alt="" aria-hidden="true" viewBox="0 0 297 76" preserveAspectRatio="none"
-                 fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 76C0 34.0264 34.0264 0 76 0H297V0C297 41.9736 262.974 76 221 76H0V76Z" fill="#FFC21D" />
-            </svg>
-            <li><a href="#" class="nav-link">home</a></li>
-            <li><a href="#" class="nav-link">projects</a></li>
-            <li><a href="#" class="nav-link">about</a></li>
-            <li><a href="#" class="nav-link">contact</a></li>
-          </ul>
-          <span aria-hidden="true">/&gt;</span>
+  <body>
+    <header class="site-header">
+      <div class="container" data-type="wide">
+        <div title="Navigate to home" id="header-logo">
+          <a href="#">
+            <img src="images/logo.svg" alt="Angela Villadiego's Logo" />
+          </a>
         </div>
-      </nav>
-    </div>
-    </div>
-  </header>
-
-  <main>
-    <section id="hero-section" aria-label="Hero">
-      <div class="background" data-type="dot-grid">
+        <nav class="primary-navigation">
+          <div class="nav-list-container">
+            <span aria-hidden="true">&lt;</span>
+            <ul role="list" title="Navigation list" class="nav-list">
+              <svg
+                id="nav-highlight"
+                alt=""
+                aria-hidden="true"
+                viewBox="0 0 297 76"
+                preserveAspectRatio="none"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 76C0 34.0264 34.0264 0 76 0H297V0C297 41.9736 262.974 76 221 76H0V76Z"
+                  fill="#FFC21D"
+                />
+              </svg>
+              <li><a href="#" class="nav-link">home</a></li>
+              <li><a href="#" class="nav-link">projects</a></li>
+              <li><a href="#" class="nav-link">about</a></li>
+              <li><a href="#" class="nav-link">contact</a></li>
+            </ul>
+            <span aria-hidden="true">/&gt;</span>
+          </div>
+        </nav>
       </div>
-      <!-- <div class="background" data-type="sprinkles">
+    </header>
+
+    <main>
+      <section id="hero-section" aria-label="Hero">
+        <div class="background" data-type="dot-grid"></div>
+        <!-- <div class="background" data-type="sprinkles">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 244 241">
           <mask id="a" fill="#fff">
             <path fill-rule="evenodd"
@@ -160,275 +168,477 @@
           <path stroke="#fff" stroke-width="2" d="M17.876 179.75 120.5 2l102.624 177.75H17.876Z" />
         </svg>
       </div> -->
-      <div class="background blend" data-type="gradient-primary" data-blend-mode="darken"></div>
-      <div class="container center-container ">
-        <div aria-hidden="true" class="center" data-type="vertically">
-          <div id="hero-content">
-            <div id="hero-image">
-              <img id="waving-hand" aria-label="A friendly waving hand! Hello!" alt="Waving hand in halftone style."
-                   src="images/hand_wave.png">
-            </div>
-
-            <div id="hero-heading" role="heading" aria-level="1"
-                 aria-label="Welcome. I'm Angela, a full-stack web and mobile developer.">
-              <h1 class="heading-sub" aria-hidden="true">Welcome. I'm</h1>
-              <h1 class="heading-1-accent" aria-hidden="true">Angela,</h1>
-              <h1 class="heading-sub" aria-hidden="true">a full-stack web and mobile developer.</h1>
-
-              <div class="icon-link-group" role="list" title="Social links">
-                <a role="listitem" href="https://github.com/AngelaVilladiego" title="Github" class="icon-link">
-                  <img aria-hidden="true" focusable="false" src="images/github.svg" alt="">
-                  <span class="sr-only">Github</span>
-                </a>
-                <a role="listitem" href="https://www.linkedin.com/in/angela-villadiego/" title="LinkedIn"
-                   class="icon-link">
-                  <img aria-hidden="true" focusable="false" src="images/linkedin.svg" alt="">
-                  <span class="sr-only">LinkedIn</span>
-                </a>
+        <div
+          class="background blend"
+          data-type="gradient-primary"
+          data-blend-mode="darken"
+        ></div>
+        <div class="container center-container">
+          <div aria-hidden="true" class="center" data-type="vertically">
+            <div id="hero-content">
+              <div id="hero-image">
+                <img
+                  id="waving-hand"
+                  aria-label="A friendly waving hand! Hello!"
+                  alt="Waving hand in halftone style."
+                  src="images/hand_wave.png"
+                />
               </div>
-            </div>            
 
-            <a title="reach out" href="#" class="button-filled" data-type="primary"><span class="button-label">reach
-                out</span></a>
+              <div
+                id="hero-heading"
+                role="heading"
+                aria-level="1"
+                aria-label="Welcome. I'm Angela, a full-stack web and mobile developer."
+              >
+                <h1 class="heading-sub" aria-hidden="true">Welcome. I'm</h1>
+                <h1 class="heading-1-accent" aria-hidden="true">Angela,</h1>
+                <h1 class="heading-sub" aria-hidden="true">
+                  a full-stack web and mobile developer.
+                </h1>
 
+                <div class="icon-link-group" role="list" title="Social links">
+                  <a
+                    role="listitem"
+                    href="https://github.com/AngelaVilladiego"
+                    title="Github"
+                    class="icon-link"
+                  >
+                    <img
+                      aria-hidden="true"
+                      focusable="false"
+                      src="images/github.svg"
+                      alt=""
+                    />
+                    <span class="sr-only">Github</span>
+                  </a>
+                  <a
+                    role="listitem"
+                    href="https://www.linkedin.com/in/angela-villadiego/"
+                    title="LinkedIn"
+                    class="icon-link"
+                  >
+                    <img
+                      aria-hidden="true"
+                      focusable="false"
+                      src="images/linkedin.svg"
+                      alt=""
+                    />
+                    <span class="sr-only">LinkedIn</span>
+                  </a>
+                </div>
+              </div>
+
+              <a
+                title="reach out"
+                href="#"
+                class="button-filled"
+                data-type="primary"
+                ><span class="button-label">reach out</span></a
+              >
+            </div>
           </div>
         </div>
-      </div>
 
-      <svg id="scroll-cta"
-           role="img" aria-label="Scroll down for more." alt="Down arrow."
-           viewBox="0 0 24 156" fill="none"
-           preserveAspectRatio="xMidYMax slice" ;
-           xmlns="http://www.w3.org/2000/svg">
-        <path
-              d="M10.9393 155.061C11.5251 155.646 12.4749 155.646 13.0607 155.061L22.6066 145.515C23.1924 144.929 23.1924 143.979 22.6066 143.393C22.0208 142.808 21.0711 142.808 20.4853 143.393L12 151.879L3.51471 143.393C2.92893 142.808 1.97918 142.808 1.39339 143.393C0.807605 143.979 0.807605 144.929 1.39339 145.515L10.9393 155.061ZM10.5 -6.55671e-08L10.5 1.43478L13.5 1.43478L13.5 6.55671e-08L10.5 -6.55671e-08ZM10.5 20.5652L10.5 23.4348L13.5 23.4348L13.5 20.5652L10.5 20.5652ZM10.5 42.5652L10.5 45.4348L13.5 45.4348L13.5 42.5652L10.5 42.5652ZM10.5 64.5652L10.5 67.4348L13.5 67.4348L13.5 64.5652L10.5 64.5652ZM10.5 86.5652L10.5 89.4348L13.5 89.4348L13.5 86.5652L10.5 86.5652ZM10.5 108.565L10.5 111.435L13.5 111.435L13.5 108.565L10.5 108.565ZM10.5 130.565L10.5 133.435L13.5 133.435L13.5 130.565L10.5 130.565ZM10.5 152.565L10.5 154L13.5 154L13.5 152.565L10.5 152.565Z"
-              fill="#FFC21D" />
-      </svg>
-    </section>
+        <svg
+          id="scroll-cta"
+          role="img"
+          aria-label="Scroll down for more."
+          alt="Down arrow."
+          viewBox="0 0 24 156"
+          fill="none"
+          preserveAspectRatio="xMidYMax slice"
+          ;
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.9393 155.061C11.5251 155.646 12.4749 155.646 13.0607 155.061L22.6066 145.515C23.1924 144.929 23.1924 143.979 22.6066 143.393C22.0208 142.808 21.0711 142.808 20.4853 143.393L12 151.879L3.51471 143.393C2.92893 142.808 1.97918 142.808 1.39339 143.393C0.807605 143.979 0.807605 144.929 1.39339 145.515L10.9393 155.061ZM10.5 -6.55671e-08L10.5 1.43478L13.5 1.43478L13.5 6.55671e-08L10.5 -6.55671e-08ZM10.5 20.5652L10.5 23.4348L13.5 23.4348L13.5 20.5652L10.5 20.5652ZM10.5 42.5652L10.5 45.4348L13.5 45.4348L13.5 42.5652L10.5 42.5652ZM10.5 64.5652L10.5 67.4348L13.5 67.4348L13.5 64.5652L10.5 64.5652ZM10.5 86.5652L10.5 89.4348L13.5 89.4348L13.5 86.5652L10.5 86.5652ZM10.5 108.565L10.5 111.435L13.5 111.435L13.5 108.565L10.5 108.565ZM10.5 130.565L10.5 133.435L13.5 133.435L13.5 130.565L10.5 130.565ZM10.5 152.565L10.5 154L13.5 154L13.5 152.565L10.5 152.565Z"
+            fill="#FFC21D"
+          />
+        </svg>
+      </section>
 
-    <section id="projects-section" aria-label="Projects">
-      <div class="section-heading" role="heading" aria-level="2"
-           aria-label="Here are some of my projects.">
-        <h2 class="heading-sub" aria-hidden="true">Here are some of my</h2>
-        <h2 class="heading-2-accent" aria-hidden="true">projects.</h2>
-      </div>
-      <div class="project-group">
-        <a class="project-card" href="https://bitbucket.org/the-voxels/workspace/projects/PHLOX">
-          <h3 class="project-heading">Phlox
-            <span class="icon baseline">
-              <svg width="20" height="20" viewBox="0 0 20 20"
-                   fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.5 2C19.5 1.17157 18.8284 0.500001 18 0.500001H4.5C3.67157 0.500001 3 1.17157 3 2C3 2.82843 3.67157 3.5 4.5 3.5H16.5V15.5C16.5 16.3284 17.1716 17 18 17C18.8284 17 19.5 16.3284 19.5 15.5V2ZM3.06066 19.0607L19.0607 3.06066L16.9393 0.93934L0.93934 16.9393L3.06066 19.0607Z"
-                      fill="#F2EADB" />
-              </svg>
-            </span>
-          </h3>
-          <p class="project-description">
-            A full-stack, cross-platform application developed with the goal of improving campus life for students and
-            faculty members with disabilities. This three-part applications includes a fully voice-navigable WearOS
-            application, a React Native mobile application, and a React.js admin portal.
-          </p>
-          <div class="project-tag-group cluster">
-            <span class="project-tag-item">React</span>
-            <span class="project-tag-item">Kotlin</span>
-            <span class="project-tag-item">Compose</span>
-            <span class="project-tag-item">.NET</span>
-            <span class="project-tag-item">SignalR</span>
-            <span class="project-tag-item">GCP</span>
-            <span class="project-tag-item">SQL</span>
-          </div>
-          <div class="project-image">
-            <img src="images/dummy_project_image.png" alt="A picture of the project." />
-          </div>
-        </a>
-        <a class="project-card" href="https://github.com/AngelaVilladiego/web-portfolio-v2">
-          <h3 class="project-heading">Portfolio
-            <span class="icon baseline">
-              <svg width="20" height="20" viewBox="0 0 20 20"
-                   fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.5 2C19.5 1.17157 18.8284 0.500001 18 0.500001H4.5C3.67157 0.500001 3 1.17157 3 2C3 2.82843 3.67157 3.5 4.5 3.5H16.5V15.5C16.5 16.3284 17.1716 17 18 17C18.8284 17 19.5 16.3284 19.5 15.5V2ZM3.06066 19.0607L19.0607 3.06066L16.9393 0.93934L0.93934 16.9393L3.06066 19.0607Z"
-                      fill="#F2EADB" />
-              </svg>
-            </span>
-          </h3>
-          <p class="project-description">An accessibility-conscious web portfolio utilizing semantic
-            HTML, Sass (SCSS), Javascript, and Greensock (GSAP) to deliver a responsive and engaging user experience.
-          </p>
-          <div class="project-tag-group cluster">
-            <span class="project-tag-item">HTML</span>
-            <span class="project-tag-item">SCSS</span>
-            <span class="project-tag-item">GSAP</span>
-            <span class="project-tag-item">Javascript</span>
-          </div>
-          <div class="project-image">
-            <img src="images/dummy_project_image.png" alt="A picture of the project." />
-          </div>
-          <div id="you-are-here">
-            <svg aria-hidden="true"
-                 width="90" height="54"
-                 viewBox="0 0 90 54" fill="none"
-                 xmlns="http://www.w3.org/2000/svg">
-              <path d="M78.263 52.275C77.6194 53.1727 76.3699 53.3787 75.4722 52.7351L60.8434 42.2471C59.9457 41.6035 59.7397 40.3541 60.3833 39.4564C61.0269 38.5587 62.2763 38.3527 63.174 38.9963L76.1775 48.3189L85.5001 35.3155C86.1437 34.4178 87.3931 34.2118 88.2908 34.8554C89.1885 35.499 89.3945 36.7484 88.7509 37.6461L78.263 52.275ZM74.6642 51.435C74.4406 50.0789 74.1762 48.7446 73.8724 47.4329L77.7693 46.5303C78.0925 47.926 78.3735 49.3444 78.6109 50.7843L74.6642 51.435ZM71.5154 39.6513C70.5416 37.0795 69.4036 34.6184 68.1145 32.2781L71.6182 30.3482C72.9992 32.8553 74.2162 35.4881 75.2562 38.2349L71.5154 39.6513ZM63.6959 25.4827C62.0495 23.3189 60.2538 21.2955 58.3228 19.4239L61.1068 16.5517C63.1825 18.5636 65.1116 20.7375 66.8792 23.0606L63.6959 25.4827ZM52.0984 14.247C49.904 12.6881 47.587 11.2925 45.1614 10.0721L46.9593 6.49888C49.5651 7.80999 52.0555 9.30991 54.415 10.9861L52.0984 14.247ZM37.6727 6.9807C35.1344 6.14659 32.5066 5.48662 29.8016 5.01189L30.4931 1.0721C33.3854 1.57973 36.1996 2.28619 38.9215 3.18062L37.6727 6.9807ZM21.7175 4.16318C19.0591 4.06535 16.3431 4.13888 13.5796 4.39325L13.213 0.410088C16.1447 0.14023 19.0324 0.0616502 21.8646 0.165878L21.7175 4.16318ZM5.50756 5.63228C4.18893 5.91497 2.86211 6.23849 1.52816 6.60378L0.471657 2.74584C1.87707 2.36096 3.27658 2.01967 4.6691 1.72115L5.50756 5.63228Z"
-                    fill="#F2EADB" />
-            </svg>
-            <span class="ff-accent">You are here</span>
-          </div>
-        </a>
-        <a class="project-card" href="https://github.com/ranidays/Pempire">
-          <h3 class="project-heading">Pempire
-            <span class="icon baseline">
-              <svg width="20" height="20" viewBox="0 0 20 20"
-                   fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.5 2C19.5 1.17157 18.8284 0.500001 18 0.500001H4.5C3.67157 0.500001 3 1.17157 3 2C3 2.82843 3.67157 3.5 4.5 3.5H16.5V15.5C16.5 16.3284 17.1716 17 18 17C18.8284 17 19.5 16.3284 19.5 15.5V2ZM3.06066 19.0607L19.0607 3.06066L16.9393 0.93934L0.93934 16.9393L3.06066 19.0607Z"
-                      fill="#F2EADB" />
-              </svg>
-            </span>
-          </h3>
-          <p class="project-description fs-400 ff-base">An RPG-style browser game with mechanics inspired by Pokemon and
-            Megaman with custom pixel art UI backgrounds, sprites, and elements.</p>
-          <div class="project-tag-group cluster">
-            <span class="project-tag-item">React</span>
-            <span class="project-tag-item">.NET</span>
-            <span class="project-tag-item">MongoDB</span>
-          </div>
-          <div class="project-image">
-            <img src="images/dummy_project_image.png" alt="A picture of the project." />
-          </div>
-        </a>
-        <a class="project-card" href="https://github.com/AngelaVilladiego/Woof-App">
-          <h3 class="project-heading">Woof
-            <span class="icon baseline">
-              <svg width="20" height="20" viewBox="0 0 20 20"
-                   fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.5 2C19.5 1.17157 18.8284 0.500001 18 0.500001H4.5C3.67157 0.500001 3 1.17157 3 2C3 2.82843 3.67157 3.5 4.5 3.5H16.5V15.5C16.5 16.3284 17.1716 17 18 17C18.8284 17 19.5 16.3284 19.5 15.5V2ZM3.06066 19.0607L19.0607 3.06066L16.9393 0.93934L0.93934 16.9393L3.06066 19.0607Z"
-                      fill="#F2EADB" />
-              </svg>
-            </span>
-          </h3>
-          <p class="project-description fs-400 ff-base">A Tinder-like Android application that helps dog owners easily
-            connect with other dog owners to find compatible matches for their pets to socialize safely.</p>
-          <div class="project-tag-group cluster">
-            <span class="project-tag-item">Kotlin</span>
-            <span class="project-tag-item">XML</span>
-            <span class="project-tag-item">Firebase</span>
-          </div>
-          <div class="project-image">
-            <img src="images/dummy_project_image.png" alt="A picture of the project." />
-          </div>
-        </a>
-        <a class="project-card" href="https://github.com/AngelaVilladiego/BeatEvenWebApp">
-          <h3 class="project-heading">BeatEven
-            <span class="icon baseline">
-              <svg width="20" height="20" viewBox="0 0 20 20"
-                   fill="none" xmlns="http://www.w3.org/2000/svg">
+      <section id="projects-section" aria-label="Projects">
+        <div
+          class="section-heading"
+          role="heading"
+          aria-level="2"
+          aria-label="Here are some of my projects."
+        >
+          <h2 class="heading-sub" aria-hidden="true">Here are some of my</h2>
+          <h2 class="heading-2-accent" aria-hidden="true">projects.</h2>
+        </div>
+        <div class="project-group">
+          <a
+            class="project-card"
+            href="https://bitbucket.org/the-voxels/workspace/projects/PHLOX"
+          >
+            <h3 class="project-heading">
+              Phlox
+              <span class="icon baseline">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.5 2C19.5 1.17157 18.8284 0.500001 18 0.500001H4.5C3.67157 0.500001 3 1.17157 3 2C3 2.82843 3.67157 3.5 4.5 3.5H16.5V15.5C16.5 16.3284 17.1716 17 18 17C18.8284 17 19.5 16.3284 19.5 15.5V2ZM3.06066 19.0607L19.0607 3.06066L16.9393 0.93934L0.93934 16.9393L3.06066 19.0607Z"
+                    fill="#F2EADB"
+                  />
+                </svg>
+              </span>
+            </h3>
+            <p class="project-description">
+              A full-stack, cross-platform application developed with the goal
+              of improving campus life for students and faculty members with
+              disabilities. This three-part applications includes a fully
+              voice-navigable WearOS application, a React Native mobile
+              application, and a React.js admin portal.
+            </p>
+            <div class="project-tag-group cluster">
+              <span class="project-tag-item">React</span>
+              <span class="project-tag-item">Kotlin</span>
+              <span class="project-tag-item">Compose</span>
+              <span class="project-tag-item">.NET</span>
+              <span class="project-tag-item">SignalR</span>
+              <span class="project-tag-item">GCP</span>
+              <span class="project-tag-item">SQL</span>
+            </div>
+            <div class="project-image">
+              <img
+                src="images/dummy_project_image.png"
+                alt="A picture of the project."
+              />
+            </div>
+          </a>
+          <a
+            class="project-card"
+            href="https://github.com/AngelaVilladiego/web-portfolio-v2"
+          >
+            <h3 class="project-heading">
+              Portfolio
+              <span class="icon baseline">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.5 2C19.5 1.17157 18.8284 0.500001 18 0.500001H4.5C3.67157 0.500001 3 1.17157 3 2C3 2.82843 3.67157 3.5 4.5 3.5H16.5V15.5C16.5 16.3284 17.1716 17 18 17C18.8284 17 19.5 16.3284 19.5 15.5V2ZM3.06066 19.0607L19.0607 3.06066L16.9393 0.93934L0.93934 16.9393L3.06066 19.0607Z"
+                    fill="#F2EADB"
+                  />
+                </svg>
+              </span>
+            </h3>
+            <p class="project-description">
+              An accessibility-conscious web portfolio utilizing semantic HTML,
+              Sass (SCSS), Javascript, and Greensock (GSAP) to deliver a
+              responsive and engaging user experience.
+            </p>
+            <div class="project-tag-group cluster">
+              <span class="project-tag-item">HTML</span>
+              <span class="project-tag-item">SCSS</span>
+              <span class="project-tag-item">GSAP</span>
+              <span class="project-tag-item">Javascript</span>
+            </div>
+            <div class="project-image">
+              <img
+                src="images/dummy_project_image.png"
+                alt="A picture of the project."
+              />
+            </div>
+            <div id="you-are-here">
+              <svg
+                aria-hidden="true"
+                width="90"
+                height="54"
+                viewBox="0 0 90 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
-                      d="M19.5 2C19.5 1.17157 18.8284 0.500001 18 0.500001H4.5C3.67157 0.500001 3 1.17157 3 2C3 2.82843 3.67157 3.5 4.5 3.5H16.5V15.5C16.5 16.3284 17.1716 17 18 17C18.8284 17 19.5 16.3284 19.5 15.5V2ZM3.06066 19.0607L19.0607 3.06066L16.9393 0.93934L0.93934 16.9393L3.06066 19.0607Z" />
+                  d="M78.263 52.275C77.6194 53.1727 76.3699 53.3787 75.4722 52.7351L60.8434 42.2471C59.9457 41.6035 59.7397 40.3541 60.3833 39.4564C61.0269 38.5587 62.2763 38.3527 63.174 38.9963L76.1775 48.3189L85.5001 35.3155C86.1437 34.4178 87.3931 34.2118 88.2908 34.8554C89.1885 35.499 89.3945 36.7484 88.7509 37.6461L78.263 52.275ZM74.6642 51.435C74.4406 50.0789 74.1762 48.7446 73.8724 47.4329L77.7693 46.5303C78.0925 47.926 78.3735 49.3444 78.6109 50.7843L74.6642 51.435ZM71.5154 39.6513C70.5416 37.0795 69.4036 34.6184 68.1145 32.2781L71.6182 30.3482C72.9992 32.8553 74.2162 35.4881 75.2562 38.2349L71.5154 39.6513ZM63.6959 25.4827C62.0495 23.3189 60.2538 21.2955 58.3228 19.4239L61.1068 16.5517C63.1825 18.5636 65.1116 20.7375 66.8792 23.0606L63.6959 25.4827ZM52.0984 14.247C49.904 12.6881 47.587 11.2925 45.1614 10.0721L46.9593 6.49888C49.5651 7.80999 52.0555 9.30991 54.415 10.9861L52.0984 14.247ZM37.6727 6.9807C35.1344 6.14659 32.5066 5.48662 29.8016 5.01189L30.4931 1.0721C33.3854 1.57973 36.1996 2.28619 38.9215 3.18062L37.6727 6.9807ZM21.7175 4.16318C19.0591 4.06535 16.3431 4.13888 13.5796 4.39325L13.213 0.410088C16.1447 0.14023 19.0324 0.0616502 21.8646 0.165878L21.7175 4.16318ZM5.50756 5.63228C4.18893 5.91497 2.86211 6.23849 1.52816 6.60378L0.471657 2.74584C1.87707 2.36096 3.27658 2.01967 4.6691 1.72115L5.50756 5.63228Z"
+                  fill="#F2EADB"
+                />
               </svg>
-            </span>
-          </h3>
-          <p class="project-description fs-400 ff-base">A full-stack web application built to help people create and
-            follow interval-based workouts. Has a visually pleasing, SVG-based, animated interval timer to help users
-            track their workout stage with visuals and sound.</p>
-          <div class="project-tag-group cluster">
-            <span class="project-tag-item">HTML</span>
-            <span class="project-tag-item">CSS</span>
-            <span class="project-tag-item">Spring.NET</span>
-            <span class="project-tag-item">.NET</span>
-            <span class="project-tag-item">SQLite</span>
+              <span class="ff-accent">You are here</span>
+            </div>
+          </a>
+          <a class="project-card" href="https://github.com/ranidays/Pempire">
+            <h3 class="project-heading">
+              Pempire
+              <span class="icon baseline">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.5 2C19.5 1.17157 18.8284 0.500001 18 0.500001H4.5C3.67157 0.500001 3 1.17157 3 2C3 2.82843 3.67157 3.5 4.5 3.5H16.5V15.5C16.5 16.3284 17.1716 17 18 17C18.8284 17 19.5 16.3284 19.5 15.5V2ZM3.06066 19.0607L19.0607 3.06066L16.9393 0.93934L0.93934 16.9393L3.06066 19.0607Z"
+                    fill="#F2EADB"
+                  />
+                </svg>
+              </span>
+            </h3>
+            <p class="project-description fs-400 ff-base">
+              An RPG-style browser game with mechanics inspired by Pokemon and
+              Megaman with custom pixel art UI backgrounds, sprites, and
+              elements.
+            </p>
+            <div class="project-tag-group cluster">
+              <span class="project-tag-item">React</span>
+              <span class="project-tag-item">.NET</span>
+              <span class="project-tag-item">MongoDB</span>
+            </div>
+            <div class="project-image">
+              <img
+                src="images/dummy_project_image.png"
+                alt="A picture of the project."
+              />
+            </div>
+          </a>
+          <a
+            class="project-card"
+            href="https://github.com/AngelaVilladiego/Woof-App"
+          >
+            <h3 class="project-heading">
+              Woof
+              <span class="icon baseline">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.5 2C19.5 1.17157 18.8284 0.500001 18 0.500001H4.5C3.67157 0.500001 3 1.17157 3 2C3 2.82843 3.67157 3.5 4.5 3.5H16.5V15.5C16.5 16.3284 17.1716 17 18 17C18.8284 17 19.5 16.3284 19.5 15.5V2ZM3.06066 19.0607L19.0607 3.06066L16.9393 0.93934L0.93934 16.9393L3.06066 19.0607Z"
+                    fill="#F2EADB"
+                  />
+                </svg>
+              </span>
+            </h3>
+            <p class="project-description fs-400 ff-base">
+              A Tinder-like Android application that helps dog owners easily
+              connect with other dog owners to find compatible matches for their
+              pets to socialize safely.
+            </p>
+            <div class="project-tag-group cluster">
+              <span class="project-tag-item">Kotlin</span>
+              <span class="project-tag-item">XML</span>
+              <span class="project-tag-item">Firebase</span>
+            </div>
+            <div class="project-image">
+              <img
+                src="images/dummy_project_image.png"
+                alt="A picture of the project."
+              />
+            </div>
+          </a>
+          <a
+            class="project-card"
+            href="https://github.com/AngelaVilladiego/BeatEvenWebApp"
+          >
+            <h3 class="project-heading">
+              BeatEven
+              <span class="icon baseline">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.5 2C19.5 1.17157 18.8284 0.500001 18 0.500001H4.5C3.67157 0.500001 3 1.17157 3 2C3 2.82843 3.67157 3.5 4.5 3.5H16.5V15.5C16.5 16.3284 17.1716 17 18 17C18.8284 17 19.5 16.3284 19.5 15.5V2ZM3.06066 19.0607L19.0607 3.06066L16.9393 0.93934L0.93934 16.9393L3.06066 19.0607Z"
+                  />
+                </svg>
+              </span>
+            </h3>
+            <p class="project-description fs-400 ff-base">
+              A full-stack web application built to help people create and
+              follow interval-based workouts. Has a visually pleasing,
+              SVG-based, animated interval timer to help users track their
+              workout stage with visuals and sound.
+            </p>
+            <div class="project-tag-group cluster">
+              <span class="project-tag-item">HTML</span>
+              <span class="project-tag-item">CSS</span>
+              <span class="project-tag-item">Spring.NET</span>
+              <span class="project-tag-item">.NET</span>
+              <span class="project-tag-item">SQLite</span>
+            </div>
+            <div class="project-image">
+              <img
+                src="images/dummy_project_image.png"
+                alt="A picture of the project."
+              />
+            </div>
+          </a>
+        </div>
+        <div class="transition-halftone" data-type="light"></div>
+      </section>
+      <section id="about-section" aria-label="About me">
+        <div class="container" data-type="wide">
+          <div
+            class="section-heading"
+            role="heading"
+            aria-level="2"
+            aria-label="A little bit about me."
+          >
+            <h2 class="heading-sub" aria-hidden="true">A little bit</h2>
+            <h2 class="heading-2-accent" aria-hidden="true">about me.</h2>
           </div>
-          <div class="project-image">
-            <img src="images/dummy_project_image.png" alt="A picture of the project." />
+          <img id="img-portrait" src="images/portrait.png" />
+          <div class="flow">
+            <p>
+              Hi! I’m Angela Villadiego, tech geek and creative wizard from the
+              Greater Toronto Area. My journey in full-stack mobile and web
+              application development is more than just a profession; it's a
+              canvas where technology and art converge into captivating
+              experiences.
+            </p>
+            <p>
+              Fueled by a lifelong passion for technology stemming from my early
+              encounters with computers and video games, I've transformed it
+              into a versatile brush, crafting digital art, 3D sculptures,
+              videos, and video games. Armed with a Computer Programming diploma
+              and navigating my final year in Computer Science, my days are now
+              dedicated to exploring the endless possibilities of code and
+              design.
+            </p>
+            <p>
+              Join me on this exhilarating ride where technology isn't just a
+              tool, but the medium through which I craft experiences that linger
+              in the minds of users. Welcome to the nexus of my technical
+              expertise, artistic flair, and unwavering commitment to making the
+              digital world not just functional, but truly unforgettable.
+            </p>
           </div>
-        </a>
-      </div>
-      <div class="transition-halftone" data-type="light"></div>
-    </section>
+          <div class="button-group">
+            <a
+              href="#"
+              class="button-outlined"
+              data-type="primary"
+              data-on-med="filled"
+            >
+              <span class="button-content"
+                >resume
+                <span class="icon baseline">
+                  <svg
+                    width="15"
+                    height="13"
+                    viewBox="0 0 15 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.64551 1.08887C8.64551 0.536582 8.19779 0.0888672 7.64551 0.0888672C7.09322 0.0888672 6.64551 0.536582 6.64551 1.08887L8.64551 1.08887ZM6.9384 11.72C7.32893 12.1105 7.96209 12.1105 8.35262 11.72L14.7166 5.35606C15.1071 4.96554 15.1071 4.33237 14.7166 3.94185C14.3261 3.55133 13.6929 3.55133 13.3024 3.94185L7.64551 9.5987L1.98865 3.94185C1.59813 3.55133 0.964964 3.55133 0.57444 3.94185C0.183916 4.33237 0.183916 4.96554 0.57444 5.35606L6.9384 11.72ZM6.64551 1.08887L6.64551 11.0129L8.64551 11.0129L8.64551 1.08887L6.64551 1.08887Z"
+                    />
+                  </svg>
+                </span>
+              </span>
+            </a>
+            <a
+              href="#"
+              class="button-outlined"
+              data-type="secondary"
+              data-on-med="filled"
+            >
+              reach out
+            </a>
+          </div>
+        </div>
+        <div class="transition-halftone" data-type="dark"></div>
+      </section>
 
-    <section id="about-section" aria-label="About me">
-      <div class="section-heading" role="heading" aria-level="2"
-           aria-label="A little bit about me.">
-        <h2 class="heading-sub" aria-hidden="true">A little bit</h2>
-        <h2 class="heading-2-accent" aria-hidden="true">about me.</h2>
-      </div>
-      <img id="img-portrait" src="images/portrait.png">
-      <div class="flow">
-        <p>Hi! I’m Angela Villadiego, tech geek and creative wizard from the Greater Toronto Area. My journey in
-          full-stack mobile and web application development is more than just a profession; it's a canvas where
-          technology and art converge into captivating experiences.
-        </p>
-        <p>Fueled by a lifelong passion for technology stemming from my early encounters with computers and video games,
-          I've transformed it into a versatile brush, crafting digital art, 3D sculptures, videos, and video games.
-          Armed with a Computer Programming diploma and navigating my final year in Computer Science, my days are now
-          dedicated to exploring the endless possibilities of code and design.
-        </p>
-        <p>Join me on this exhilarating ride where technology isn't just a tool, but the medium through which I craft
-          experiences that linger in the minds of users. Welcome to the nexus of my technical expertise, artistic flair,
-          and unwavering commitment to making the digital world not just functional, but truly unforgettable.</p>
-      </div>
-      <div class="even-columns">
-        <a class="button-outlined" data-type="primary" data-on-med="filled">
-          <span>resume
+      <section
+        class="container"
+        data-type="wide"
+        id="contact-section"
+        aria-label="Contact"
+      >
+        <div
+          class="section-heading"
+          role="heading"
+          aria-level="2"
+          aria-label="Let's get in contact."
+        >
+          <h2 class="heading-sub" aria-hidden="true">Let's get in</h2>
+          <h2 class="heading-2-accent" aria-hidden="true">contact.</h2>
+        </div>
+        <div class="form flow">
+          <div id="form-name" class="field-container">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div id="form-email" class="field-container">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" />
+          </div>
+          <div id="form-message" class="field-container">
+            <label for="message">Message</label>
+            <textarea type="text" id="message" name="message"> </textarea>
+          </div>
+          <button type="submit">
+            send
             <span class="icon baseline">
-              <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
-                      d="M8.64551 1.08887C8.64551 0.536582 8.19779 0.0888672 7.64551 0.0888672C7.09322 0.0888672 6.64551 0.536582 6.64551 1.08887L8.64551 1.08887ZM6.9384 11.72C7.32893 12.1105 7.96209 12.1105 8.35262 11.72L14.7166 5.35606C15.1071 4.96554 15.1071 4.33237 14.7166 3.94185C14.3261 3.55133 13.6929 3.55133 13.3024 3.94185L7.64551 9.5987L1.98865 3.94185C1.59813 3.55133 0.964964 3.55133 0.57444 3.94185C0.183916 4.33237 0.183916 4.96554 0.57444 5.35606L6.9384 11.72ZM6.64551 1.08887L6.64551 11.0129L8.64551 11.0129L8.64551 1.08887L6.64551 1.08887Z" />
+                  d="M14.3136 8.29793C14.7041 7.9074 14.7041 7.27424 14.3136 6.88371L7.94959 0.519753C7.55907 0.129228 6.9259 0.129228 6.53538 0.519753C6.14486 0.910277 6.14486 1.54344 6.53538 1.93397L12.1922 7.59082L6.53538 13.2477C6.14486 13.6382 6.14486 14.2714 6.53538 14.6619C6.9259 15.0524 7.55907 15.0524 7.94959 14.6619L14.3136 8.29793ZM0.121338 8.59082H13.6064V6.59082H0.121338V8.59082Z"
+                />
               </svg>
             </span>
-          </span>
-        </a>
-        <a class="button-outlined" data-type="secondary" data-on-med="filled">
-          reach out
-        </a>
-      </div>
-      <div class="transition-halftone" data-type="dark"></div>
-    </section>
-
-    <section id="contact-section" aria-label="Contact">
-      <div class="section-heading" role="heading" aria-level="2"
-           aria-label="Let's get in contact.">
-        <h2 class="heading-sub" aria-hidden="true">Let's get in</h2>
-        <h2 class="heading-2-accent" aria-hidden="true">contact.</h2>
-      </div>
-      <div class="form flow">
-        <div id="form-name">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name">
+          </button>
         </div>
-        <div id="form-email">
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email">
+
+        <div class="icon-link-group" role="list" title="Social links">
+          <a
+            role="listitem"
+            href="https://github.com/AngelaVilladiego"
+            title="Github"
+            class="icon-link"
+          >
+            <img
+              aria-hidden="true"
+              focusable="false"
+              src="images/github.svg"
+              alt=""
+            />
+            <span class="sr-only">Github</span>
+          </a>
+          <a
+            role="listitem"
+            href="https://www.linkedin.com/in/angela-villadiego/"
+            title="LinkedIn"
+            class="icon-link"
+          >
+            <img
+              aria-hidden="true"
+              focusable="false"
+              src="images/linkedin.svg"
+              alt=""
+            />
+            <span class="sr-only">LinkedIn</span>
+          </a>
         </div>
-        <div id="form-message">
-          <label for="message">Message</label>
-          <input type="text" id="message" name="message">
-        </div>
-        <button type="submit">send
-          <span class="icon baseline">
-            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                    d="M14.3136 8.29793C14.7041 7.9074 14.7041 7.27424 14.3136 6.88371L7.94959 0.519753C7.55907 0.129228 6.9259 0.129228 6.53538 0.519753C6.14486 0.910277 6.14486 1.54344 6.53538 1.93397L12.1922 7.59082L6.53538 13.2477C6.14486 13.6382 6.14486 14.2714 6.53538 14.6619C6.9259 15.0524 7.55907 15.0524 7.94959 14.6619L14.3136 8.29793ZM0.121338 8.59082H13.6064V6.59082H0.121338V8.59082Z" />
-            </svg>
-          </span>
-        </button>
-      </div>
+      </section>
+    </main>
+  </body>
 
-      <div class="icon-link-group" role="list" title="Social links">
-        <a role="listitem" href="https://github.com/AngelaVilladiego" title="Github" class="icon-link">
-          <img aria-hidden="true" focusable="false" src="images/github.svg" alt="">
-          <span class="sr-only">Github</span>
-        </a>
-        <a role="listitem" href="https://www.linkedin.com/in/angela-villadiego/" title="LinkedIn"
-           class="icon-link">
-          <img aria-hidden="true" focusable="false" src="images/linkedin.svg" alt="">
-          <span class="sr-only">LinkedIn</span>
-        </a>
-      </div>
-    </section>
-  </main>
-</body>
-
-<footer class="site-footer">
-  <p>designed & built by yours truly.</p>
-</footer>
-
+  <footer class="site-footer">
+    <p>designed & built by yours truly.</p>
+  </footer>
 </html>
